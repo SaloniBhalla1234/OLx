@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - World of Cars</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff6600;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            margin: 0;
+            color: #ff6600;
+        }
+
+        nav {
+            background-color: #1f1f1f;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c00;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form h2 {
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #ff6600;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        .contact-form button {
+            display: inline-block;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form button:hover {
+            background-color: #e65c00;
+            transform: scale(1.05);
+        }
+
+        .contact-form button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+            border-radius: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact-form button:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .contact-form button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .contact-form {
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>World of Cars</h1>
+        <p>Know your Car Price</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="/contact" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" required>
+
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit"><span>Submit</span></button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 World of Cars. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
